@@ -12,7 +12,7 @@ to an input pattern with that stored pattern which has the highest similarity.
     numpy
 
 
-## Usage
+### Usage
 Add the Package to your Pyton path and import the Hopfield network class:
 
     from hopfieldnetwork import HopfieldNetwork
@@ -42,7 +42,7 @@ Open an already trained Hopfield network:
     hopfield_network2 = HopfieldNetwork(filepath=’network2.npz’)
 
 
-## Graphical user interface
+### Graphical user interface
 
 ![Hopfield network GUI](examples/project4/latex/images/gui_screenshot.png?raw=true)
 
