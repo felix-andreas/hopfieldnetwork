@@ -1,8 +1,9 @@
 # Hopfield network: a form of recurrent artificial neural network
 An implementiation of a Hopfield network in Python. It can be used as Python package or with the included GUI.
-****
+
+
 ## Package
-Add the Package to your Pyton path and import the Hopfield network class:
+Add the Package to your Pyton path and import the Hopfield network class:\
 `from hopfieldnetwork import HopfieldNetwork`
 
 ### Usage
