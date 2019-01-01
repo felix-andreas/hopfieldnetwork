@@ -1,4 +1,4 @@
-<img src="data/icon/icon.svg" width="100" height="100" align="left"/>
+<img src="data/icon/icon.svg" width="96" height="96" align="right"/>
 
 # Hopfield network: a form of recurrent artificial neural network
 
