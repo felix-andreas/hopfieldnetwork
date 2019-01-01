@@ -3,7 +3,7 @@
 # hopfieldnetwork
 **hopfieldnetwork** is a Python package which provides an implementation of a Hopfield network. The package also includes a graphical user interface.
 
-A Hopfield network is a special kind of an artifical neural network. It implements a so called associative or content addresable memory. This means that memory contents are not reached via a memory address, but that the network responses
+>A Hopfield network is a special kind of an artifical neural network. It implements a so called associative or content addresable memory. This means that memory contents are not reached via a memory address, but that the network responses
 to an input pattern with that stored pattern which has the highest similarity.
 
 ### Requirements
