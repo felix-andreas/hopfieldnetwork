@@ -1,4 +1,4 @@
-<img src="data/icon/icon.svg" width="32" height="32" align="left"/>
+<img src="data/icon/icon.svg" width="64" height="64" align="left"/>
 
 # hopfieldnetwork
 
