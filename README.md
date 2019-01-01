@@ -1,8 +1,8 @@
-
+<img src="file:///home/felix/git/hopfieldnetwork/data/icon/icon.svg" width="100" height="100" align="right"/>
 
 # Hopfield network: a form of recurrent artificial neural network
 
-<img src="file:///home/felix/git/hopfieldnetwork/data/icon/icon.svg" width="100" height="100" align="right"/>
+
 
 An implementiation of a Hopfield network in Python. It can be used as Python package or with the included GUI.
 
