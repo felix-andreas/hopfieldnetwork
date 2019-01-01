@@ -31,7 +31,7 @@ Open an already trained Hopfield network:\
 `hopfield_network2 = HopfieldNetwork(filepath=’network2.npz’)`
 
 
-## GUI
+## Graphical user interface
 
 ![Hopfield network GUI](examples/project4/latex/images/gui_screenshot.png?raw=true)
 
