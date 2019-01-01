@@ -1,7 +1,6 @@
 <img src="data/icon/icon.svg" width="64" height="64" align="left"/>
 
 # hopfieldnetwork
-
 hopfieldnetwork is a Python package which provides an implementation of the Hopfield network. The package also includes a graphical user interface
 
 ### Requirements
@@ -16,12 +15,6 @@ Add the Package to your Pyton path and import the Hopfield network class:\
 Create a new Hopfield network of size _N_ = 100:\
 `hopfield_network1 = HopfieldNetwork(N=100)`
 
-Open an already trained Hopfield network:\
-`hopfield_network2 = HopfieldNetwork(filepath=’network2.npz’)`
-
-Save a network as a file:\
-`hopfield_network3.save_network(’path/to/file’)`
-
 Save / Train Images into the Hopfield network:\
 `hopfield_network1.train_pattern(input_pattern)`
 
@@ -30,6 +23,12 @@ Start an asynchronous update with 5 iterations:\
 
 Compute the energy function of a pattern:\
 `hopfield_network1.compute_energy(input_pattern)`
+
+Save a network as a file:\
+`hopfield_network1.save_network(’path/to/file’)`
+
+Open an already trained Hopfield network:\
+`hopfield_network2 = HopfieldNetwork(filepath=’network2.npz’)`
 
 
 ## GUI
