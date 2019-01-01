@@ -34,7 +34,7 @@ In the Hopfield network GUI, the one-dimensional vectors of the neuron states ar
 **Run the GUI with:**\
 `python2/python3 start_gui.py`
 
-!image[Hopfield network GUI](hopfieldnetwork/examples/project4/latex/images/gui_screenshot.png?raw=true)
+![Hopfield network GUI](hopfieldnetwork/examples/project4/latex/images/gui_screenshot.png?raw=true)
 
 The Hopfield network GUI is divided into three frames:
 
