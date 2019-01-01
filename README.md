@@ -2,20 +2,16 @@
 
 # hopfieldnetwork
 
-
-
-An implementiation of a Hopfield network in Python. It can be used as Python package or with the included GUI.
+hopfieldnetwork is a Python package which provides an implementation of the Hopfield network. The package also includes a graphical user interface
 
 ### Requirements
     matplotlib
     numpy
 
 
-## Package
+## Usage
 Add the Package to your Pyton path and import the Hopfield network class:\
 `from hopfieldnetwork import HopfieldNetwork`
-
-### Usage
 
 Create a new Hopfield network of size _N_ = 100:\
 `hopfield_network1 = HopfieldNetwork(N=100)`
