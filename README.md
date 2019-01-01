@@ -10,6 +10,7 @@ hopfieldnetwork is a Python package which provides an implementation of the Hopf
 
 ## Usage
 Add the Package to your Pyton path and import the Hopfield network class:\
+
     from hopfieldnetwork import HopfieldNetwork
 
 Create a new Hopfield network of size _N_ = 100:\
