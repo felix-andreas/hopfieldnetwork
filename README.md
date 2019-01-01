@@ -75,7 +75,7 @@ The output frame (center) shows the current neuron configuration.
 The Saved pattern frame (right) shows the pattern currently saved in the network.
 - **Set initial** sets the currently displayed image as new neuron state.
 - **Set input** sets the currently displayed image as input pattern.
-- **Remove** Removes the currently displayed image from the Hopfield network.
+- **Remove** removes the currently displayed image from the Hopfield network.
 
 ### Menu bar
 - In the **Network** tab, a new Hopfield network of any size can be initialized.
