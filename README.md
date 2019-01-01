@@ -1,7 +1,7 @@
 <img src="data/icon/icon.svg" width="64" height="64" align="left"/>
 
 # hopfieldnetwork
-**hopfieldnetwork** is a Python package which provides an implementation of the Hopfield network. The package also includes a graphical user interface.
+**hopfieldnetwork** is a Python package which provides an implementation of a Hopfield network. The package also includes a graphical user interface.
 
 ### Requirements
     matplotlib
