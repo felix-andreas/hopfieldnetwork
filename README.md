@@ -45,8 +45,9 @@ Open an already trained Hopfield network:
 In the Hopfield network GUI, the one-dimensional vectors of the neuron states are visualized as a two-dimensional binary image. The user has the option to load different pictures/patterns into network and then start an asynchronous or synchronous update with or without finite temperatures. There are also prestored different networks in the examples tab.
 
 
-**Run the GUI with:**\
-`python2/python3 start_gui.py`
+**Run the GUI with:**
+
+    python2/python3 start_gui.py
 
 ### GUI Layout
 The Hopfield network GUI is divided into three frames:
