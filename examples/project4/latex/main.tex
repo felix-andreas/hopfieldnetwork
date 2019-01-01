@@ -1,0 +1,101 @@
+\documentclass{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{here}
+\usepackage[font=footnotesize]{caption}
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+\usepackage[paper=a4paper,left=30mm,right=30mm,top=22mm,bottom=22mm]{geometry}
+\usepackage{graphicx}
+\usepackage{flafter} % Force floats to be typeset after their occurrence
+
+
+% minted
+\usepackage{minted}
+\setminted{tabsize=4} 
+%\usemintedstyle{monokai}
+\usemintedstyle{borland}
+\usepackage{xcolor}
+\definecolor{dark}{RGB}{40,40,40}
+\definecolor{light}{RGB}{248,248,248}
+\setminted{bgcolor=light}% fix minted spacing when bg is set
+\BeforeBeginEnvironment{minted}{\par\noindent \\}
+\AfterEndEnvironment{minted}{\par\noindent}
+\makeatletter 
+\patchcmd{\minted@colorbg}{\noindent}{\medskip\noindent}{}{}
+\apptocmd{\endminted@colorbg}{\par\medskip}{}{}
+\makeatother
+
+% font
+\usepackage[default]{sourcesanspro}
+\usepackage[italic]{mathastext}
+\usepackage[default]{sourceserifpro}
+
+% layout
+\makeatletter
+\renewcommand{\@seccntformat}[1]{}
+\renewcommand{\numberline}[1]{}
+\makeatother
+\usepackage{sectsty}
+\allsectionsfont{\normalfont\sffamily\bfseries}
+
+% bibliography
+\usepackage[backend=bibtex, style=numeric, natbib=true, isbn=false, backref=true, sorting=none, url=false]{biblatex} % Use the bibtex backend with the authoryear citation style (which resembles APA)
+\addbibresource{bibliography.bib} % The filename of the bibliography
+
+
+
+\begin{document}
+
+
+% title page and
+\begin{center} \sffamily 
+\begin{figure}[h!]\includegraphics[width = \linewidth]{images/hukombi_bbw_op}\end{figure}
+\vfill
+{\Large \textbf{Projekt 4}}\\
+\vspace*{0.2cm}
+{\LARGE \textbf{Neuronale Netze: Das Hopfield Modell}}\\
+\vspace*{0.35cm}
+{\large Felix Andreas 560403}\\
+\vspace*{0.25cm}
+{\large Wissenschaftliches Rechnen / CP II}
+\vfill
+\vfill
+{\large Abgabe: 31.03.2018}
+
+\thispagestyle{empty}
+\clearpage
+\end{center}
+
+% table of contents
+{\sffamily \tableofcontents}
+\thispagestyle{empty}
+\clearpage
+
+% content
+\setcounter{page}{1}
+
+\include{sections/vorbemerkung}
+\include{sections/einfuehrung}
+\include{sections/implementierung}
+\include{sections/aufgabe4_1}
+\include{sections/aufgabe4_2}
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+\newpage
+\renewcommand*{\newunitpunct}{\addcomma\space} % komma statt punkt
+\printbibliography[heading=bibintoc]
+
+\end{document}
+
+
