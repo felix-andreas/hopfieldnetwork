@@ -25,8 +25,9 @@ Start an asynchronous update with 5 iterations:
 
     hopfield_network1.update_neurons(iterations=5, mode=’async’)
 
-Compute the energy function of a pattern:\
-    `hopfield_network1.compute_energy(input_pattern)`
+Compute the energy function of a pattern:
+
+    hopfield_network1.compute_energy(input_pattern)
 
 Save a network as a file:
 
