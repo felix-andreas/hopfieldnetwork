@@ -1,5 +1,6 @@
 # Hopfield network: a form of recurrent artificial neural network
 ![Logo](data/icon/icon.gif?raw=true)
+
 An implementiation of a Hopfield network in Python. It can be used as Python package or with the included GUI.
 
 ### Requirements
