@@ -83,7 +83,8 @@ The Saved pattern frame (right) shows the pattern currently saved in the network
 - **Set input** sets the currently displayed image as input pattern.
 - **Remove** removes the currently displayed image from the Hopfield network.
 
-**Menu bar**\
+**Menu bar**
+
 - In the **Network** tab, a new Hopfield network of any size can be initialized.
 In addition, it is possible to save the current network and load stored networks. Also, a raster graphic (JPG, PNG, GIF, TIF) can be added to the network or an entirly new network can be created out of multiple images.
 - In the **Options** tab, the update with finite temperatures can be (de)activated.
