@@ -62,14 +62,14 @@ In the Hopfield network GUI, the one-dimensional vectors of the neuron states ar
 ### GUI Layout
 The Hopfield network GUI is divided into three frames:
 
-### Input frame
+**Input frame**\
 The input frame (left) is the main point of interaction with the network. The user can change the state of an input neuron by a left click to +1, accordingly by to right-click to -1. This will only change the state of the input pattern not the state of the actual network. The input pattern can be transfered to the network with the buttons below:
 - **Set intial** sets the current input pattern as the start configuration of the neurons.
 - **Save / Train** stores / trains the current input pattern into the Hopfield network.
 - **Rand** sets a random input pattern.
 - **Clear** sets all points of the input pattern to -1.
 
-### Output frame
+**Output frame**\
 The output frame (center) shows the current neuron configuration.
 - **Sync update** starts a synchronous update.
 - **Async update** starts an asynchronous update.
@@ -77,13 +77,13 @@ The output frame (center) shows the current neuron configuration.
 - **Set partial** sets the first half of the neurons to -1.
 - **Set random** sets a random neuron state.
 
-### Saved pattern frame
+**Saved pattern frame**\
 The Saved pattern frame (right) shows the pattern currently saved in the network.
 - **Set initial** sets the currently displayed image as new neuron state.
 - **Set input** sets the currently displayed image as input pattern.
 - **Remove** removes the currently displayed image from the Hopfield network.
 
-### Menu bar
+**Menu bar**\
 - In the **Network** tab, a new Hopfield network of any size can be initialized.
 In addition, it is possible to save the current network and load stored networks. Also, a raster graphic (JPG, PNG, GIF, TIF) can be added to the network or an entirly new network can be created out of multiple images.
 - In the **Options** tab, the update with finite temperatures can be (de)activated.
