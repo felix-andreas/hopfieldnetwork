@@ -13,7 +13,7 @@ to an input pattern with that stored pattern which has the highest similarity.
 
 
 ### Usage
-Add the Package to your Pyton path and import the Hopfield network class:
+Add the Package to your Python path and import the Hopfield network class:
 ```python
 from hopfieldnetwork import HopfieldNetwork
 ```
