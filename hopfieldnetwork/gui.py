@@ -37,7 +37,7 @@ print('OS:         {}\n'.format(checkOS()))
 
 
 # main application
-class GUI():
+class GUI:
     def __init__(self):
         self.master = tk.Tk()
         self.master.withdraw()
