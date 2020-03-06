@@ -78,9 +78,9 @@ visualized as a two-dimensional binary image. The user has the option to load di
  with or without finite temperatures. There are also prestored different networks in the
   examples tab.
 
-** the GUI with:**
+**Start the UI:**
 
-If you install the `hopfieldnetwork` package via pip, you can start the UI with:
+If you installed the `hopfieldnetwork` package via pip, you can start the UI with:
 
     hopfieldnetwork-ui
 
