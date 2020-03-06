@@ -7,7 +7,8 @@
 > are not reached via a memory address, but that the network responses to an input
 > pattern with that stored pattern which has the highest similarity.
 
-**hopfieldnetwork** is a Python package which provides an implementation of a Hopfield network. The package also includes a graphical user interface.
+**hopfieldnetwork** is a Python package which provides an implementation of a Hopfield
+network. The package also includes a graphical user interface.
 
 ## Installing
 
@@ -46,7 +47,7 @@ hopfield_network1.train_pattern(input_pattern)
 Start an asynchronous update with 5 iterations:
 
 ``` python
-hopfield_network1.update_neurons(iterations=5, mode=’async’)
+hopfield_network1.update_neurons(iterations=5, mode="async")
 ```
 
 Compute the energy function of a pattern:
@@ -58,20 +59,24 @@ hopfield_network1.compute_energy(input_pattern)
 Save a network as a file:
 
 ``` python
-hopfield_network1.save_network(’path/to/file’)
+hopfield_network1.save_network("path/to/file")
 ```
 
 Open an already trained Hopfield network:
 
 ``` python
-hopfield_network2 = HopfieldNetwork(filepath=’network2.npz’)
+hopfield_network2 = HopfieldNetwork(filepath="network2.npz")
 ```
 
 ### Graphical user interface
 
 ![Hopfield network GUI](examples/project4/latex/images/gui_screenshot.png?raw=true)
 
-In the Hopfield network GUI, the one-dimensional vectors of the neuron states are visualized as a two-dimensional binary image. The user has the option to load different pictures/patterns into network and then start an asynchronous or synchronous update with or without finite temperatures. There are also prestored different networks in the examples tab.
+In the Hopfield network GUI, the one-dimensional vectors of the neuron states are
+visualized as a two-dimensional binary image. The user has the option to load different
+ pictures/patterns into network and then start an asynchronous or synchronous update
+ with or without finite temperatures. There are also prestored different networks in the
+  examples tab.
 
 **Run the GUI with:**
 
@@ -82,7 +87,10 @@ In the Hopfield network GUI, the one-dimensional vectors of the neuron states ar
 The Hopfield network GUI is divided into three frames:
 
 **Input frame**\
-The input frame (left) is the main point of interaction with the network. The user can change the state of an input neuron by a left click to +1, accordingly by to right-click to -1. This will only change the state of the input pattern not the state of the actual network. The input pattern can be transfered to the network with the buttons below:
+The input frame (left) is the main point of interaction with the network. The user can
+change the state of an input neuron by a left click to +1, accordingly by to right-click
+ to -1. This will only change the state of the input pattern not the state of the actual
+  network. The input pattern can be transfered to the network with the buttons below:
 
 * **Set intial** sets the current input pattern as the start configuration of the neurons.
 * **Save / Train** stores / trains the current input pattern into the Hopfield network.
@@ -109,7 +117,9 @@ The Saved pattern frame (right) shows the pattern currently saved in the network
 
 * In the **Network** tab, a new Hopfield network of any size can be initialized.
 
-In addition, it is possible to save the current network and load stored networks. Also, a raster graphic (JPG, PNG, GIF, TIF) can be added to the network or an entirly new network can be created out of multiple images.
+In addition, it is possible to save the current network and load stored networks.
+Also, a raster graphic (JPG, PNG, GIF, TIF) can be added to the network or an entirly
+new network can be created out of multiple images.
 
 * In the **Options** tab, the update with finite temperatures can be (de)activated.
 * **View** offers options for visually changing the GUI.
