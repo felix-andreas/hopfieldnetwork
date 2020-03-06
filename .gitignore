@@ -1,3 +1,20 @@
-# Byte-compiled / optimized / DLL files
+# OS and IDE
+.DS_Store
+.idea
+.vscode
+
+# Byte-compiled / optimized / DLL files / Cache
 __pycache__/
 *.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+
+# Distribution / packaging
+.Python
+build/
+dist/
+sdist/
+wheels/
+*.egg
+*.egg-info/

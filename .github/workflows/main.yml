@@ -1,0 +1,58 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+    name: Build and Test
+
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 4
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v1
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Build and install
+      run: |
+        pip install .
+    - name: Build distributions
+      run: |
+        pip install setuptools wheel
+        python setup.py sdist bdist_wheel
+
+  lint:
+    name: Lint and Autoformat
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+        with:
+          ref: ${{ github.ref }}
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+      - name: Black Code Formatter
+        id: black
+        run: |
+          pip install black
+          black .
+          git diff --quiet && git diff --staged --quiet
+          has_changed=$?
+          echo "::set-output name=has_changed::$has_changed"
+          echo $has_changed
+      - name: Commit black changes
+        if: steps.black.outputs.has_changed == 1
+        run: |
+          git config --global user.name 'Felix Andreas'
+          git config --global user.email 'felix.andreas95@googlemail.com'
+          git remote set-url origin https://x-access-token:${{ secrets.REPO_ACCESS_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "Automated Code Formatting using Black"
+          git push
