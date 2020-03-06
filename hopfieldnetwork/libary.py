@@ -12,17 +12,17 @@ class HopfieldNetwork:
     def initialize_new_network(self, N):
         self.N = N  # number of neurons
         self.w = np.zeros((N, N))  # weight matrix
-        self.xi = np.empty((N, 0), dtype='int8')  # array with saved patterns
-        self.S = -1 * np.ones(N, dtype='int8')  # state of the neurons
+        self.xi = np.empty((N, 0), dtype="int8")  # array with saved patterns
+        self.S = -1 * np.ones(N, dtype="int8")  # state of the neurons
         self.p = 0  # number of saved patterns
         self.t = 0  # time steps
 
     def load_network(self, filepath):
         npzfile = np.load(filepath)
-        self.w = npzfile['arr_0']
-        self.xi = npzfile['arr_1']
+        self.w = npzfile["arr_0"]
+        self.xi = npzfile["arr_1"]
         self.N = self.w.shape[0]
-        self.S = -1 * np.ones(self.N, dtype='int8')
+        self.S = -1 * np.ones(self.N, dtype="int8")
         self.p = self.xi.shape[1]
         self.t = 0
 
@@ -40,17 +40,21 @@ class HopfieldNetwork:
             self.xi = np.delete(self.xi, i, axis=1)
             self.p = self.xi.shape[1]
         else:
-            print('There is no pattern to remove!')
+            print("There is no pattern to remove!")
 
     def set_initial_neurons_state(self, S_initial):  # uses S_initial in place
         if len(S_initial.shape) != 1 or S_initial.shape[0] != self.N:
-            raise ValueError("Unexpected shape/size of initial neuron state: {}".format(S_initial.shape))
-        self.t = 0  # reset timer for new initial state vector
+            raise ValueError(
+                "Unexpected shape/size of initial neuron state: {}".format(
+                    S_initial.shape
+                )
+            )
+        self.t = 0  # reset timer1 for new initial state vector
         self.S = S_initial  # set new initial neuron state
 
     def update_neurons(self, iterations, mode, run_max=False):
         self.t += iterations
-        if mode == 'async':
+        if mode == "async":
             for _ in range(iterations):
                 for i in np.random.permutation(self.N):  # semi-random
                     self.S[i] = sign_0(np.dot(self.w[i, :], self.S))
@@ -63,7 +67,7 @@ class HopfieldNetwork:
                         return
                     self.t += 1
 
-        elif mode == 'sync':
+        elif mode == "sync":
             for _ in range(iterations):
                 self.S = sign_0(np.dot(self.w, self.S))
             if run_max:
@@ -81,18 +85,32 @@ class HopfieldNetwork:
 
     def update_neurons_with_finite_temp(self, iterations, mode, beta):
         self.t += iterations
-        if mode == 'async':
+        if mode == "async":
             for _ in range(iterations):
                 for i in np.random.permutation(self.N):  # semi-random
-                    self.S[i] = 2 * (1 / (1 + np.exp(- 2 * beta * np.dot(self.w[i, :], self.S))) >= np.random.rand(1)) - 1
-        elif mode == 'sync':
+                    self.S[i] = (
+                        2
+                        * (
+                            1 / (1 + np.exp(-2 * beta * np.dot(self.w[i, :], self.S)))
+                            >= np.random.rand(1)
+                        )
+                        - 1
+                    )
+        elif mode == "sync":
             for _ in range(iterations):
-                self.S = 2 * (1 / (1 + np.exp(- 2 * beta * np.dot(self.w, self.S))) >= np.random.rand(self.N)) - 1
+                self.S = (
+                    2
+                    * (
+                        1 / (1 + np.exp(-2 * beta * np.dot(self.w, self.S)))
+                        >= np.random.rand(self.N)
+                    )
+                    - 1
+                )
         else:
             raise ValueError("Unkown mode: {}".format(mode))
 
     def compute_energy(self, S):
-        return -0.5 * np.einsum('i,ij,j', S, self.w, S)
+        return -0.5 * np.einsum("i,ij,j", S, self.w, S)
 
     def check_stability(self, S):  # stability condition
         return np.array_equal(S, sign_0(np.dot(self.w, S)))
@@ -103,7 +121,7 @@ def construct_hebb_matrix(xi):
     if len(xi.shape) == 1:
         w = np.outer(xi, xi) / n  # p = 1
     elif len(xi.shape) == 2:
-        w = np.einsum('ik,jk', xi, xi) / n  # p > 1
+        w = np.einsum("ik,jk", xi, xi) / n  # p > 1
     else:
         raise ValueError("Unexpected shape of input pattern xi: {}".format(xi.shape))
     np.fill_diagonal(w, 0)  # set diagonal elements to zero

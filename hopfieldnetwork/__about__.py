@@ -1,0 +1,6 @@
+__title__ = "hopfieldnetwork"
+__description__ = "A Python implementation of the Hopfield network"
+__url__ = "https://github.com/andreasfelix/hopfieldnetwork"
+__version__ = "1.0.0"
+__author__ = "Felix Andreas"
+__license__ = "GNU General Public License v3.0"

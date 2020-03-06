@@ -1,0 +1,3 @@
+[console_scripts]
+hopfieldnetwork-ui = hopfieldnetwork.gui:start_gui
+
