@@ -989,3 +989,7 @@ class GUI:
 def start_gui():
     app = GUI()
     app.master.mainloop()
+
+
+if __name__ == "__main__":
+    start_gui()

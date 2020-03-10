@@ -78,9 +78,15 @@ visualized as a two-dimensional binary image. The user has the option to load di
  with or without finite temperatures. There are also prestored different networks in the
   examples tab.
 
-**Run the GUI with:**
+**Start the UI:**
 
-    python2/python3 start_gui.py
+If you installed the `hopfieldnetwork` package via pip, you can start the UI with:
+
+    hopfieldnetwork-ui
+
+Otherwise you can start UI by running `gui.py` as module:
+
+    python -m hopfieldnetwork.gui
 
 ### GUI Layout
 
