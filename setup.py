@@ -19,10 +19,9 @@ setup(
     author=about["__author__"],
     license=about["__license__"],
     packages=find_packages(),
-    install_requires=["numpy", "matplotlib"],
+    install_requires=["numpy", "matplotlib", "pillow"],
     python_requires=">=2.7",
-    include_package_data=True,
-    package_data={"hopfieldnetwork": ["data/**"],},
+    package_data={"hopfieldnetwork": ["data/**/*"],},
     entry_points={
         "console_scripts": ["hopfieldnetwork-ui=hopfieldnetwork.gui:start_gui"]
     },
