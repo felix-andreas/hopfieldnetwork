@@ -33,7 +33,7 @@ from .tk_utils import CreateToolTip, checkOS, ScrollSpinbox
 BASE_PATH = os.path.abspath(os.path.dirname(__file__))
 DATA_PATH = os.path.join(BASE_PATH, "data")
 EXAMPLES_PATH = os.path.join(DATA_PATH, "hopfield_network_examples")
-PHYSICISTS_PATH = os.path.join(DATA_PATH, "images", "famous_physicists")
+PHYSICISTS_PATH = os.path.join(DATA_PATH, "famous_physicists")
 
 # print system informations
 print("Python:     {}.{}.{}".format(*sys.version_info[:3]))
